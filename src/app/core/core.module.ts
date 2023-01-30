@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainPageComponent } from './main-page/main-page.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
-import { NavbarDropdownComponent } from './navbar-dropdown/navbar-dropdown.component';
+import { NavbarDropdownComponent } from './components/navbar-dropdown/navbar-dropdown.component';
 import { RouterModule } from '@angular/router';
 import { NzGridModule } from 'ng-zorro-antd/grid';
-import { OperatorsOptionsComponent } from './operators-options/operators-options.component';
-import { HomeComponent } from './home/home.component';
+import { OperatorsOptionsComponent } from './components/operators-options/operators-options.component';
+import { HomeComponent } from './components/home/home.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
