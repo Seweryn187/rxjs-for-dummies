@@ -1,13 +1,21 @@
-<nz-layout>
+<nz-layout class="outer-layout">
     <nz-header>
-        <h1 class="app-title">Rxjs for Dummies</h1>
-        <app-navbar-dropdown></app-navbar-dropdown>
+        <div nz-row>
+            <div nz-col nzSpan="24">
+                <span class="app-title">Rxjs for Dummies</span>
+            </div>
+            <!-- <div nz-col>
+                <app-navbar-dropdown></app-navbar-dropdown>
+            </div> -->
+        </div>
     </nz-header>
-    <nz-layout>
-        <nz-sider>Sider</nz-sider>
-        <nz-content>
+    <nz-layout class="inner-layout">
+        <nz-sider nzWidth="10%" nzTheme="light" class="sider">
+            <app-operators-options class="sider-options"></app-operators-options>
+        </nz-sider>
+        <nz-content class=" main-content ">
             <router-outlet></router-outlet>
         </nz-content>
     </nz-layout>
-    <nz-footer>Seweryn Cholewa © Rxjs for Dummies 2023</nz-footer>
+    <nz-footer class="footer ">Seweryn Cholewa © Rxjs for Dummies 2023</nz-footer>
 </nz-layout>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Operators } from '../models/operators';
 
 @Component({
   selector: 'app-navbar-dropdown',
@@ -7,6 +6,5 @@ import { Operators } from '../models/operators';
   styleUrls: ['./navbar-dropdown.component.scss']
 })
 export class NavbarDropdownComponent {
-  public operators = Operators;
   
 }
