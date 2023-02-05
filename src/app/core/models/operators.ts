@@ -10,5 +10,8 @@ export enum Operators {
     TAKE_UNTIL = 'Take until',
     DEBOUNCE_TIME = 'Debounce time',
     DISTINCT_UNTIL_CHANGED = 'Distinct until changed',
-    FORK_JOIN  = 'Fork join'
+    FORK_JOIN  = 'Fork join',
+    TAP = 'Tap',
+    PLUCK = 'Pluck',
+    CATCH_ERROR = 'Catch error'
 }
