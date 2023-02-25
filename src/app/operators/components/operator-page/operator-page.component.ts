@@ -13,9 +13,11 @@ export class OperatorPageComponent implements OnInit {
   constructor(private router: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.router.params.subscribe( (params) => {
-      this.operatorName = params['operator'].replaceAll('-', ' ');
-    });
+    // this.router.params.subscribe( (params) => {
+
+    //   console.log(params['operator']);
+    //   this.operatorName = params['operator'].replaceAll('-', ' ');
+    // });
   }
 
 

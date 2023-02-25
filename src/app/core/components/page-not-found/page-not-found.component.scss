@@ -1,9 +1,10 @@
 :host {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    .home-text {
+    .page-not-found-text {
         font-size: x-large;
         font-weight: 500;
     }

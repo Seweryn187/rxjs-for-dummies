@@ -1,1 +1,26 @@
-<h2 class="operator-name">{{ operatorName}}</h2>
+<section class="operator">
+    <h2 class="operator__title"></h2>
+
+    <div class="operator__content">
+        <nz-collapse class="operator__example-code">
+            <nz-collapse-panel>
+                <p>
+                    <ng-content>
+
+                    </ng-content>
+                </p>
+            </nz-collapse-panel>
+        </nz-collapse>
+
+        <nz-collapse class="operator__example-use">
+            <nz-collapse-panel>
+                <p>
+                    <ng-content>
+
+                    </ng-content>
+                </p>
+            </nz-collapse-panel>
+        </nz-collapse>
+    </div>
+
+</section>
