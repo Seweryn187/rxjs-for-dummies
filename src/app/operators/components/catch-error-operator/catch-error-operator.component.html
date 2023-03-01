@@ -1,1 +1,17 @@
-<p>catch-error-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Catch error </span>- is used to handle errors that occur during the execution of an observable stream. It allows you to gracefully handle errors without causing the observable to terminate and emit an error notification.
+            When an error occurs in an observable sequence, catchError intercepts the error and allows you to handle it in some way. You can return a new observable sequence to replace the original sequence, or you can return a fallback value or default
+            value.
+        </p>
+    </div>
+    <div example-code>
+        <h4> Catch error used to handle request error (using typescript)</h4>
+        <quill-view format="text" [content]="codeExample"></quill-view>
+    </div>
+    <div example-use>
+        <h4> Catch error used to handle request error (using typescript)</h4>
+        <button nz-button nzType="primary" (click)="sendRequestToGetError()">Try out code above</button>
+    </div>
+</app-operator-page>

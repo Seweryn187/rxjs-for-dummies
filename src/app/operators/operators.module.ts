@@ -16,6 +16,9 @@ import { MergeOperatorComponent } from './components/merge-operator/merge-operat
 import { CatchErrorOperatorComponent } from './components/catch-error-operator/catch-error-operator.component';
 import { ExhaustMapOperatorComponent } from './components/exhaust-map-operator/exhaust-map-operator.component';
 import { WithLatestFromOperatorComponent } from './components/with-latest-from-operator/with-latest-from-operator.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
@@ -34,11 +37,14 @@ import { WithLatestFromOperatorComponent } from './components/with-latest-from-o
     MergeOperatorComponent,
     CatchErrorOperatorComponent,
     ExhaustMapOperatorComponent,
-    WithLatestFromOperatorComponent
+    WithLatestFromOperatorComponent,
   ],
   imports: [
     CommonModule,
-    NzCollapseModule
+    NzCollapseModule,
+    NzButtonModule,
+    NzNotificationModule,
+    QuillModule
   ]
 })
 export class OperatorsModule { }

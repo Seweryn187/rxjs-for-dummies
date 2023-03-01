@@ -1,24 +1,22 @@
 <section class="operator">
-    <h2 class="operator__title"></h2>
+    <ng-content select="[short-description]">
+
+    </ng-content>
 
     <div class="operator__content">
-        <nz-collapse class="operator__example-code">
-            <nz-collapse-panel>
-                <p>
-                    <ng-content>
+        <nz-collapse nzGhost class="operator__example-code">
+            <nz-collapse-panel nzHeader="Example code">
+                <ng-content select="[example-code]">
 
-                    </ng-content>
-                </p>
+                </ng-content>
             </nz-collapse-panel>
         </nz-collapse>
 
-        <nz-collapse class="operator__example-use">
-            <nz-collapse-panel>
-                <p>
-                    <ng-content>
+        <nz-collapse nzGhost class="operator__example-use">
+            <nz-collapse-panel nzHeader="Example use">
+                <ng-content select="[example-use]">
 
-                    </ng-content>
-                </p>
+                </ng-content>
             </nz-collapse-panel>
         </nz-collapse>
     </div>
