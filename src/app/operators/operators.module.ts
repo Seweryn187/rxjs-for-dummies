@@ -19,7 +19,11 @@ import { WithLatestFromOperatorComponent } from './components/with-latest-from-o
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { QuillModule } from 'ngx-quill';
-
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PeopleTableComponent } from './components/people-table/people-table.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +42,19 @@ import { QuillModule } from 'ngx-quill';
     CatchErrorOperatorComponent,
     ExhaustMapOperatorComponent,
     WithLatestFromOperatorComponent,
+    PeopleTableComponent,
   ],
   imports: [
     CommonModule,
     NzCollapseModule,
     NzButtonModule,
     NzNotificationModule,
-    QuillModule
+    QuillModule,
+    NzTableModule,
+    NzDividerModule,
+    NzInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class OperatorsModule { }

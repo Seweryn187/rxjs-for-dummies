@@ -4,7 +4,7 @@
     </ng-content>
 
     <div class="operator__content">
-        <nz-collapse nzGhost class="operator__example-code">
+        <nz-collapse class="operator__example-code">
             <nz-collapse-panel nzHeader="Example code">
                 <ng-content select="[example-code]">
 
@@ -14,7 +14,7 @@
 
         <nz-collapse nzGhost class="operator__example-use">
             <nz-collapse-panel nzHeader="Example use">
-                <ng-content select="[example-use]">
+                <ng-content class="example-use-container" select="[example-use]">
 
                 </ng-content>
             </nz-collapse-panel>

@@ -1,1 +1,22 @@
-<p>debounce-time-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Debounce time </span>- is used to delay the emission of items from an observable stream until a certain amount of time has elapsed after the last emission. In below example it is used to add wait time to filter input
+            for user to end typing.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true" c></quill-view>
+    </div>
+    <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+        <div class="filter-wrapper">
+            <span>Filter input without debounce time</span>
+            <input class="name-filter" nz-input placeholder="Name filter" type="string" [formControl]="nameFilterControler" />
+        </div>
+        <div class="filter-wrapper">
+            <span>Filter input with debounce time</span>
+            <input class="name-filter-with-db" nz-input placeholder="Name filter with db" type="string" [formControl]="nameFilterControlerDB" />
+        </div>
+    </div>
+</app-operator-page>

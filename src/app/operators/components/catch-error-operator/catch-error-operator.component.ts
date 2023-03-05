@@ -12,8 +12,7 @@ export class CatchErrorOperatorComponent {
 
   constructor(private mockRequestService: MockRequestsService, private notification: NzNotificationService) {}
 
-  codeExample = `
-    this.mockRequestService.getError().pipe(
+  codeExample = `this.mockRequestService.getError().pipe(
       catchError((err, caught) => {
         this.createErrorNotification(err);
         return caught;

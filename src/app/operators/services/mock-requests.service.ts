@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { map, Observable, of, throwError } from 'rxjs';
+import { PEOPLE } from '../data/table-data';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,9 @@ export class MockRequestsService {
         }
         return n;
       }));
+  }
+
+  public getPeople(): Observable<any> {
+    return of(PEOPLE);
   }
 }

@@ -1,0 +1,14 @@
+<nz-table #peopleTable [nzData]="tableData">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of peopleTable.data">
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+        </tr>
+    </tbody>
+</nz-table>

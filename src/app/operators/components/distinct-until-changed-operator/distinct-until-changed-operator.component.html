@@ -1,1 +1,20 @@
-<p>distinct-until-changed-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Distinct until changed </span>- to filter out consecutive duplicate values emitted by an observable stream. It ensures that only distinct values are emitted by an observable stream by comparing the current value emitted
+            by the stream with the previous value emitted. It is used below to filter table only when value of filter input has changed since last time.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true" c></quill-view>
+
+    </div>
+    <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+        <div class="filter-wrapper">
+            <span>Filter input with distinct until changed</span>
+            <input class="name-filter" nz-input placeholder="Name filter" type="string" [formControl]="nameFilterControler" />
+        </div>
+        <p>{{diffrentFilterName}}</p>
+    </div>
+</app-operator-page>

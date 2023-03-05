@@ -1,1 +1,18 @@
-<p>combine-latest-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Combine latest </span>- is used to combine the most recent values of multiple observables into a new observable. This operator emits a new value each time any of its source observables emit a new value. In below example
+            combine latest is used to combine two streams: list of people and name filter to get only people with name including search phrase.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
+    </div>
+    <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+        <div clas="filter-wrapper">
+            <p>Name filter</p>
+            <input class="name-filter" nz-input placeholder="Name filter" type="string" [formControl]="nameFilterControler" />
+        </div>
+    </div>
+</app-operator-page>
