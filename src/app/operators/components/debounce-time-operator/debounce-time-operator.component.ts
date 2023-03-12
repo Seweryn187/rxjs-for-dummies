@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, Subject, takeUntil, combineLatest, debounceTime } from 'rxjs';
 import { IPerson } from '../../data/table-data';
@@ -9,7 +9,7 @@ import { MockRequestsService } from '../../services/mock-requests.service';
   templateUrl: './debounce-time-operator.component.html',
   styleUrls: ['./debounce-time-operator.component.scss']
 })
-export class DebounceTimeOperatorComponent {
+export class DebounceTimeOperatorComponent implements OnInit, OnDestroy {
   
   nameFilterControler: FormControl = new FormControl('');
   nameFilterControlerDB: FormControl = new FormControl('');
@@ -26,12 +26,13 @@ export class DebounceTimeOperatorComponent {
   });`;
 
 
-  constructor(private mockRequestService: MockRequestsService) {
-
+  constructor(private mockRequestService: MockRequestsService) {}
+  
+  ngOnInit(): void {
     const nameFilter$ = this.nameFilterControler.valueChanges;
     const nameFilterWithDB$ = this.nameFilterControlerDB.valueChanges.pipe(debounceTime(1000));
 
-    this.people$ = this.mockRequestService.getPeople();
+    this.people$ = this.mockRequestService.getPeopleOf();
     
     this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
       this.tableData = people;

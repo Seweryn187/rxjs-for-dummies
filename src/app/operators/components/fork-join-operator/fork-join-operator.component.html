@@ -1,1 +1,33 @@
-<p>fork-join-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Fork join </span>- is used to combine multiple observables into a single observable that emits an array of values, once all the observables have completed. The emitted values are in the same order as the input observables.
+            In example below it is used to get data from two diffrent endpoints, one with data about people and second about people addresses and than it uses it to create table.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
+    </div>
+    <div class="example-use" example-use>
+        <nz-table #peopleTable [nzData]="tableData">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Zip code</th>
+                    <th>Street</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of peopleTable.data">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.age }}</td>
+                    <td>{{ person.address?.city }}</td>
+                    <td>{{ person.address?.zipCode }}</td>
+                    <td>{{ person.address?.street }}</td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>
+</app-operator-page>

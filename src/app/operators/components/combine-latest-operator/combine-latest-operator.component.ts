@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { BehaviorSubject, combineLatest, Observable, Subject, takeUntil } from 'rxjs';
+import { FormControl } from '@angular/forms';
+import { combineLatest, Observable, Subject, takeUntil } from 'rxjs';
 import { IPerson } from '../../data/table-data';
 import { MockRequestsService } from '../../services/mock-requests.service';
 
@@ -28,7 +28,7 @@ export class CombineLatestOperatorComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const nameFilter$ = this.nameFilterControler.valueChanges;
 
-    this.people$ = this.mockRequestService.getPeople();
+    this.people$ = this.mockRequestService.getPeopleOf();
     
     this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
       this.tableData = people;

@@ -1,1 +1,13 @@
-<p>map-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Map </span>- is used to transform the values emitted by an observable into new values, using a transformation function. In example below it is used to map external person object to internal person object.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
+    </div>
+    <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+    </div>
+</app-operator-page>
