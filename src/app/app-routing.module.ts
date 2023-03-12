@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 import { HomeComponent } from './core/components/home/home.component';
-import { OfOperatorComponent } from './operators/components/of-operator/of-operator.component';
 import { CatchErrorOperatorComponent } from './operators/components/catch-error-operator/catch-error-operator.component';
 import { CombineLatestOperatorComponent } from './operators/components/combine-latest-operator/combine-latest-operator.component';
 import { DebounceTimeOperatorComponent } from './operators/components/debounce-time-operator/debounce-time-operator.component';
@@ -18,7 +17,6 @@ import { WithLatestFromOperatorComponent } from './operators/components/with-lat
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'operators/of', component: OfOperatorComponent},
   { path: 'operators/catch-error', component: CatchErrorOperatorComponent},
   { path: 'operators/combine-latest', component: CombineLatestOperatorComponent},
   { path: 'operators/debounce-time', component: DebounceTimeOperatorComponent},

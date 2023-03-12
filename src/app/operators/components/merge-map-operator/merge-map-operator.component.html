@@ -1,1 +1,14 @@
-<p>merge-map-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Merge map </span>- is an operator in RxJS that is used for flattening observables that emit other observables, and merging the emitted values into a single observable stream.
+
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
+    </div>
+    <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+    </div>
+</app-operator-page>

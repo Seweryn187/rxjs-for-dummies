@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OperatorPageComponent } from './components/operator-page/operator-page.component';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
-import { OfOperatorComponent } from './components/of-operator/of-operator.component';
 import { MapOperatorComponent } from './components/map-operator/map-operator.component';
 import { FilterOperatorComponent } from './components/filter-operator/filter-operator.component';
 import { CombineLatestOperatorComponent } from './components/combine-latest-operator/combine-latest-operator.component';
@@ -28,7 +27,6 @@ import { PeopleTableComponent } from './components/people-table/people-table.com
 @NgModule({
   declarations: [
     OperatorPageComponent,
-    OfOperatorComponent,
     MapOperatorComponent,
     FilterOperatorComponent,
     CombineLatestOperatorComponent,

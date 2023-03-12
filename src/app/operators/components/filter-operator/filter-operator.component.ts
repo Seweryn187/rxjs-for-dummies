@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { combineLatest, filter, Observable, Subject, takeUntil } from 'rxjs';
-import { IPerson } from '../../data/table-data';
-import { MockRequestsService } from '../../services/mock-requests.service';
+import { Observable, Subject, takeUntil } from 'rxjs';
+import { IPerson } from '@operators/data/table-data';
+import { MockRequestsService } from '@operators/services/mock-requests.service';
 
 @Component({
   selector: 'app-filter-operator',

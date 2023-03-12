@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, Subject, takeUntil, combineLatest, map } from 'rxjs';
-import { IPerson, IPersonExternal } from '../../data/table-data';
-import { MockRequestsService } from '../../services/mock-requests.service';
+import { Observable, Subject, takeUntil, map } from 'rxjs';
+import { IPerson, IPersonExternal } from '@operators/data/table-data';
+import { MockRequestsService } from '@operators/services/mock-requests.service';
 
 @Component({
   selector: 'app-map-operator',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { catchError, retry, take } from 'rxjs';
-import { MockRequestsService } from '../../services/mock-requests.service';
+import { catchError, take } from 'rxjs';
+import { MockRequestsService } from '@operators/services/mock-requests.service';
 
 @Component({
   selector: 'app-catch-error-operator',

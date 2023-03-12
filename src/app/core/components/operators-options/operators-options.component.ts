@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Operators } from '../../models/operators';
+import { Operators } from '@operators/models/operators';
 
 @Component({
   selector: 'app-operators-options',

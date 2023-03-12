@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, Subject, debounceTime, tap, distinctUntilChanged, takeUntil, combineLatest } from 'rxjs';
-import { IPerson } from '../../data/table-data';
-import { MockRequestsService } from '../../services/mock-requests.service';
+import { IPerson } from '@operators/data/table-data';
+import { MockRequestsService } from '@operators/services/mock-requests.service';
 
 @Component({
   selector: 'app-exhaust-map-operator',

@@ -1,5 +1,4 @@
 export enum Operators {
-    OF = 'of',
     MAP = 'map',
     FILTER = 'filter',
     COMBINE_LATEST = 'combine latest',
