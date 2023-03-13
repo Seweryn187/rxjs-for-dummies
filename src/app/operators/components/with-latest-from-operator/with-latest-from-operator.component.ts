@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./with-latest-from-operator.component.scss']
 })
 export class WithLatestFromOperatorComponent {
+  codeExample = ``;
 
 }

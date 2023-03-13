@@ -35,7 +35,7 @@ export class ForkJoinOperatorComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const nameFilter$ = this.nameFilterControler.valueChanges;
 
-    this.people$ = this.mockRequestService.getPeopleOf();
+    this.people$ = this.mockRequestService.getPeopleArray();
 
     this.addresses$ = this.mockRequestService.getAddresses();
     

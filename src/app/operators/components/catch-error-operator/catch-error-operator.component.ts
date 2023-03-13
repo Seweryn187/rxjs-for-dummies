@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { catchError, take } from 'rxjs';
 import { MockRequestsService } from '@operators/services/mock-requests.service';
+import { NotificationService } from '@operators/services/notification.service';
 
 @Component({
   selector: 'app-catch-error-operator',
@@ -10,7 +10,7 @@ import { MockRequestsService } from '@operators/services/mock-requests.service';
 })
 export class CatchErrorOperatorComponent {
 
-  constructor(private mockRequestService: MockRequestsService, private notification: NzNotificationService) {}
+  constructor(private mockRequestService: MockRequestsService, private notification: NotificationService) {}
 
   codeExample = `this.mockRequestService.getError().pipe(
       catchError((err, caught) => {
@@ -31,11 +31,7 @@ export class CatchErrorOperatorComponent {
   }
 
   public createErrorNotification(err: string): void {
-    this.notification
-      .blank(
-        'Server request error',
-        err
-      );
+    this.notification.createErrorNotification(err);
   }
 
 

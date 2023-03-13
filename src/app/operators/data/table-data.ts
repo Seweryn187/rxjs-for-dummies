@@ -2,6 +2,12 @@ export interface IPerson {
     name: string;
     age: number;
     address?: IAddress;
+    position?: Positions;
+}
+
+export enum Positions {
+    EMPLOYEE = 'employee',
+    LEADER = 'leader'
 }
 
 export interface IAddress {
@@ -18,15 +24,18 @@ export interface IPersonExternal {
 export const PEOPLE: IPerson[] = [
     {
         name: 'Adam',
-        age: 20
+        age: 20,
+        position: Positions.LEADER
     },
     {
         name: 'Ewa',
-        age: 30
+        age: 30,
+        position: Positions.EMPLOYEE
     },
     {
         name: 'Tomek',
-        age: 40
+        age: 40,
+        position: Positions.EMPLOYEE
     }
 ];
 

@@ -20,12 +20,12 @@ export class MockRequestsService {
       }));
   }
 
-  public getPeopleOf(): Observable<IPerson[]> {
+  public getPeopleArray(): Observable<IPerson[]> {
     return of(PEOPLE);
   }
 
-  public getPeopleFrom(): Observable<IPerson> {
-    return from(PEOPLE);
+  public getPeopleSeparately(): Observable<IPerson> {
+    return of(...PEOPLE);
   }
 
   public getAddresses(): Observable<IAddress[]> {

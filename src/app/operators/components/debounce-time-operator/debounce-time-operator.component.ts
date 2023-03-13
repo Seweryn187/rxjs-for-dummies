@@ -32,7 +32,7 @@ export class DebounceTimeOperatorComponent implements OnInit, OnDestroy {
     const nameFilter$ = this.nameFilterControler.valueChanges;
     const nameFilterWithDB$ = this.nameFilterControlerDB.valueChanges.pipe(debounceTime(1000));
 
-    this.people$ = this.mockRequestService.getPeopleOf();
+    this.people$ = this.mockRequestService.getPeopleArray();
     
     this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
       this.tableData = people;

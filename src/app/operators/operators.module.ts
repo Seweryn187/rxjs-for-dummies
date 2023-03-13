@@ -23,6 +23,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PeopleTableComponent } from './components/people-table/people-table.component';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { PeopleTableComponent } from './components/people-table/people-table.com
     NzDividerModule,
     NzInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzRadioModule
   ]
 })
 export class OperatorsModule { }

@@ -41,7 +41,7 @@ export class DistinctUntilChangedOperatorComponent implements OnInit, OnDestroy{
       distinctUntilChanged()
     );
 
-    this.people$ = this.mockRequestService.getPeopleOf();
+    this.people$ = this.mockRequestService.getPeopleArray();
     
     this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
       this.tableData = people;

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./switch-map-operator.component.scss']
 })
 export class SwitchMapOperatorComponent {
+  codeExample = ``;
 
 }

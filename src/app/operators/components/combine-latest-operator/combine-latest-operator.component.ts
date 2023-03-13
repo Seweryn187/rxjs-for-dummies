@@ -28,7 +28,7 @@ export class CombineLatestOperatorComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     const nameFilter$ = this.nameFilterControler.valueChanges;
 
-    this.people$ = this.mockRequestService.getPeopleOf();
+    this.people$ = this.mockRequestService.getPeopleArray();
     
     this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
       this.tableData = people;

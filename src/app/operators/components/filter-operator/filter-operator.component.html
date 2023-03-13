@@ -11,8 +11,11 @@
     <div class="example-use" example-use>
         <app-people-table [tableData]="tableData"></app-people-table>
         <div clas="filter-wrapper">
-            <p>Name filter</p>
-            <input class="name-filter" nz-input placeholder="Name filter" type="string" [formControl]="nameFilterControler" />
+            <p>Position filter</p>
+            <nz-radio-group [formControl]="chosenPositionControler">
+                <label nz-radio [nzValue]="positions.EMPLOYEE">Employee</label>
+                <label nz-radio [nzValue]="positions.LEADER">Leader</label>
+            </nz-radio-group>
         </div>
     </div>
 </app-operator-page>

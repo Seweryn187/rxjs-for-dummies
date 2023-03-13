@@ -1,13 +1,15 @@
 <app-operator-page>
     <div short-description>
         <p class="description-text">
-            <span class="important"> Merge </span>- is an operator in RxJS that is used for flattening observables that emit other observables, and merging the emitted values into a single observable stream.
-
+            <span class="important"> Merge </span>- operator is used to combine multiple Observables into a single Observable, emitting all the values from all the input Observables as they arrive. In the example below it is used for showing messages
+            after successfull login and logout.
         </p>
     </div>
     <div example-code>
         <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
     </div>
     <div class="example-use" example-use>
+        <button class="example-use-button" nz-button nzType="primary" (click)="login()">Login</button>
+        <button class="example-use-button" nz-button nzType="primary" (click)="logout()">Logout</button>
     </div>
 </app-operator-page>

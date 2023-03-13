@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, Subject, takeUntil } from 'rxjs';
-import { IPerson } from '@operators/data/table-data';
+import { combineLatest, filter, forkJoin, Observable, Subject, takeUntil } from 'rxjs';
+import { IPerson, Positions } from '@operators/data/table-data';
 import { MockRequestsService } from '@operators/services/mock-requests.service';
 
 @Component({
@@ -11,7 +11,8 @@ import { MockRequestsService } from '@operators/services/mock-requests.service';
 })
 export class FilterOperatorComponent implements OnInit, OnDestroy{
   
-  nameFilterControler: FormControl = new FormControl('');
+  positions: typeof Positions = Positions;
+  chosenPositionControler: FormControl = new FormControl(this.positions.EMPLOYEE);
   people$: Observable<IPerson[]> = new Observable<IPerson[]>;
   tableData: IPerson[] = [];
 
@@ -26,26 +27,24 @@ export class FilterOperatorComponent implements OnInit, OnDestroy{
   constructor(private mockRequestService: MockRequestsService) {}
 
   ngOnInit(): void {
-    const nameFilter$ = this.nameFilterControler.valueChanges;
+    const chosenPosition$ = this.chosenPositionControler.valueChanges;
 
-    this.people$ = this.mockRequestService.getPeopleOf();
+    this.people$ = this.mockRequestService.getPeopleArray();
     
     this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
       this.tableData = people;
     })
 
-    // combineLatest([nameFilter$, this.people$])
+    // forkJoin([chosenPosition$, this.people$])
     //   .pipe(
     //     takeUntil(this.destroy$),
-    //     filter(([nameFilter, people]) => 
-    //     {
-    //       return people.filter( ({name}) => name.toLowerCase().includes(nameFilter))
+    //     filter(([chosenPosition, people]) => {
+          
     //     })
     //   )
-    //   .subscribe( ([nameFilter,  person]) => {
-    //     console.log(nameFilter);
-    //     console.log(person);
-    //     this.tableData.push(person);
+    //   .subscribe( ([chosenPosition,  people]) => {
+    //     console.log(people);
+    //     this.tableData = people;
     // });
   }
 

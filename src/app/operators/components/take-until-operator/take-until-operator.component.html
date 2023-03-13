@@ -1,1 +1,13 @@
-<p>take-until-operator works!</p>
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Take until </span>- operator in RxJS is used to complete an Observable stream when another Observable emits a value. It allows us to define a "termination condition" for an Observable, and complete it as soon as that
+            condition is met. In below example it is used to unsubscribe when component is destroyed.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
+    </div>
+    <div class="example-use" example-use>
+    </div>
+</app-operator-page>
