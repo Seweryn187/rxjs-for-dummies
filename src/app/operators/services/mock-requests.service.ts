@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { from, map, Observable, of, throwError } from 'rxjs';
-import { ADDRESSES, IAddress, IPerson, IPersonExternal, PEOPLE, PEOPLE_EXTERNAL } from '../data/table-data';
+import { delay, filter, from, map, Observable, of, switchMap, take, throwError } from 'rxjs';
+import { ADDRESSES, IAddress, IPerson, IPersonDetails, IPersonExternal, PEOPLE, PEOPLE_DETAILS, PEOPLE_EXTERNAL } from '../data/table-data';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class MockRequestsService {
   }
 
   public getPeopleSeparately(): Observable<IPerson> {
-    return of(...PEOPLE);
+    return from(PEOPLE);
   }
 
   public getAddresses(): Observable<IAddress[]> {
@@ -34,5 +34,15 @@ export class MockRequestsService {
 
   public getPeopleFromExternalSource(): Observable<IPersonExternal> {
     return from(PEOPLE_EXTERNAL);
+  }
+
+  public getPersonDetail(id: number): Observable<IPersonDetails> {
+    return of(PEOPLE_DETAILS).pipe(
+      delay(3000),
+      map( (details) => details[id]),
+      switchMap( (person) => {
+        return of(person);
+      })
+    );
   }
 }

@@ -10,6 +10,6 @@ export enum Operators {
     FORK_JOIN  = 'fork join',
     MERGE = 'merge',
     CATCH_ERROR = 'catch error',
-    EXHAUST_MAP = 'exhaust map',
+    THROTTLE_TIME  = 'Throttle time',
     WITH_LATEST_FROM = 'with latest from',
 }

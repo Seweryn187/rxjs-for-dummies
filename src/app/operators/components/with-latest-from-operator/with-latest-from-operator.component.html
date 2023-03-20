@@ -1,12 +1,18 @@
 <app-operator-page>
     <div short-description>
         <p class="description-text">
-            <span class="important"> With latest from</span>- ...
+            <span class="important"> With latest from</span>- operator in RxJS is used to combine the latest values from two or more observables. It takes one or more observables as arguments, and returns a new observable that emits an array of the latest
+            values from all the observables, each time any one of the observables emits a new value. In example below it is used for filtering table data.
         </p>
     </div>
     <div example-code>
         <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
     </div>
     <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+        <div clas="filter-wrapper">
+            <p>Name filter</p>
+            <input class="name-filter" nz-input placeholder="Name filter" type="string" [formControl]="nameFilterControler" />
+        </div>
     </div>
 </app-operator-page>

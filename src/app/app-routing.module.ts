@@ -6,7 +6,6 @@ import { CatchErrorOperatorComponent } from '@operators/components/catch-error-o
 import { CombineLatestOperatorComponent } from '@operators/components/combine-latest-operator/combine-latest-operator.component';
 import { DebounceTimeOperatorComponent } from '@operators/components/debounce-time-operator/debounce-time-operator.component';
 import { DistinctUntilChangedOperatorComponent } from '@operators/components/distinct-until-changed-operator/distinct-until-changed-operator.component';
-import { ExhaustMapOperatorComponent } from '@operators/components/exhaust-map-operator/exhaust-map-operator.component';
 import { FilterOperatorComponent } from '@operators/components/filter-operator/filter-operator.component';
 import { ForkJoinOperatorComponent } from '@operators/components/fork-join-operator/fork-join-operator.component';
 import { MapOperatorComponent } from '@operators/components/map-operator/map-operator.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   { path: 'operators/combine-latest', component: CombineLatestOperatorComponent},
   { path: 'operators/debounce-time', component: DebounceTimeOperatorComponent},
   { path: 'operators/distinct-until-changed', component: DistinctUntilChangedOperatorComponent},
-  { path: 'operators/exhaust-map', component: ExhaustMapOperatorComponent},
   { path: 'operators/filter', component: FilterOperatorComponent},
   { path: 'operators/fork-join', component: ForkJoinOperatorComponent},
   { path: 'operators/map', component: MapOperatorComponent},

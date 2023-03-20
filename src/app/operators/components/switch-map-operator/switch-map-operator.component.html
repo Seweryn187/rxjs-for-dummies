@@ -1,12 +1,36 @@
 <app-operator-page>
     <div short-description>
         <p class="description-text">
-            <span class="important"> Switch map </span>- ...
+            <span class="important"> Switch map </span>- takes an observable as its input and returns a new observable. It also takes a function that maps the original observable's events to another observable. When the original observable produces a
+            new event, switchMap unsubscribes from the previous observable (if any) and subscribes to the new observable produced by the mapping function. This means that switchMap only emits the events from the most recent observable, ignoring any previous
+            observables that may still be emitting events. In example below it is used to cancel request to download picked person details, when other person is clicked before response will arrive.
         </p>
     </div>
     <div example-code>
         <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
     </div>
     <div class="example-use" example-use>
+        <nz-table #peopleTable [nzData]="tableData">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of peopleTable.data" (click)="choosePerson(person.id)">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.age }}</td>
+                </tr>
+            </tbody>
+        </nz-table>
+
+        <div *ngIf="personDetails$ | async as personDetails">
+            <p>Person details</p>
+            <p>Fullname: {{personDetails.fullname}}</p>
+            <p>Department: {{personDetails.department}}</p>
+            <p>Phone number: {{personDetails.phoneNumber}}</p>
+
+        </div>
     </div>
 </app-operator-page>

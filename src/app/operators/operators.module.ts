@@ -13,7 +13,6 @@ import { DistinctUntilChangedOperatorComponent } from './components/distinct-unt
 import { ForkJoinOperatorComponent } from './components/fork-join-operator/fork-join-operator.component';
 import { MergeOperatorComponent } from './components/merge-operator/merge-operator.component';
 import { CatchErrorOperatorComponent } from './components/catch-error-operator/catch-error-operator.component';
-import { ExhaustMapOperatorComponent } from './components/exhaust-map-operator/exhaust-map-operator.component';
 import { WithLatestFromOperatorComponent } from './components/with-latest-from-operator/with-latest-from-operator.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
@@ -39,7 +38,6 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
     ForkJoinOperatorComponent,
     MergeOperatorComponent,
     CatchErrorOperatorComponent,
-    ExhaustMapOperatorComponent,
     WithLatestFromOperatorComponent,
     PeopleTableComponent,
   ],
