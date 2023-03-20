@@ -1,0 +1,22 @@
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Pipe </span>- takes an observable sequence as its input and returns a new observable sequence that has been modified by one or more operators in the pipeline. Each operator in the pipeline takes the output of the previous
+            operator as its input and performs a specific transformation on the data. In example below it is used to firstly to delays the emission of values from observable with filter name value changes with debounceTime operator, then it uses tap()
+            to perform side effect for each emitted value and in this case to set new value for diffrentFilterName variable. Lastly it uses distinctUntilChanged(), which ensures that only distinct values are emitted by this observable. The combination
+            of these operations is possible thanks to the pipe operator.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true" c></quill-view>
+
+    </div>
+    <div class="example-use" example-use>
+        <app-people-table [tableData]="tableData"></app-people-table>
+        <div class="filter-wrapper">
+            <span>Filter input with distinct until changed</span>
+            <input class="name-filter" nz-input placeholder="Name filter" type="string" [formControl]="nameFilterControler" />
+        </div>
+        <p>{{diffrentFilterName}}</p>
+    </div>
+</app-operator-page>

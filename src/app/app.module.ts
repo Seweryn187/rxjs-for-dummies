@@ -9,7 +9,7 @@ import { OperatorsModule } from './operators/operators.module';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

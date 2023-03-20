@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { OperatorPageComponent } from './components/operator-page/operator-page.component';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { MapOperatorComponent } from './components/map-operator/map-operator.component';
-import { FilterOperatorComponent } from './components/filter-operator/filter-operator.component';
 import { CombineLatestOperatorComponent } from './components/combine-latest-operator/combine-latest-operator.component';
 import { SwitchMapOperatorComponent } from './components/switch-map-operator/switch-map-operator.component';
 import { TakeUntilOperatorComponent } from './components/take-until-operator/take-until-operator.component';
@@ -23,13 +22,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PeopleTableComponent } from './components/people-table/people-table.component';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { ThrottleTimeOperatorComponent } from './components/throttle-time-operator/throttle-time-operator.component';
-import { RetryOperatorComponent } from './components/retry-operator/retry-operator.component';
+import { PipeOperatorComponent } from './components/pipe-operator/pipe-operator.component';
 
 @NgModule({
   declarations: [
     OperatorPageComponent,
     MapOperatorComponent,
-    FilterOperatorComponent,
     CombineLatestOperatorComponent,
     SwitchMapOperatorComponent,
     TakeUntilOperatorComponent,
@@ -41,7 +39,7 @@ import { RetryOperatorComponent } from './components/retry-operator/retry-operat
     WithLatestFromOperatorComponent,
     PeopleTableComponent,
     ThrottleTimeOperatorComponent,
-    RetryOperatorComponent,
+    PipeOperatorComponent
   ],
   imports: [
     CommonModule,

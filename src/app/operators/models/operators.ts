@@ -11,5 +11,5 @@ export enum Operators {
     CATCH_ERROR = 'catch error',
     THROTTLE_TIME  = 'throttle time',
     WITH_LATEST_FROM = 'with latest from',
-    RETRY = 'retry'
+    PIPE = 'pipe'
 }
