@@ -13,7 +13,7 @@ export class FilterOperatorComponent implements OnInit, OnDestroy{
   
   positions: typeof Positions = Positions;
   chosenPositionControler: FormControl = new FormControl(this.positions.EMPLOYEE);
-  people$: Observable<IPerson[]> = new Observable<IPerson[]>;
+  people$: Observable<IPerson> = new Observable<IPerson>;
   tableData: IPerson[] = [];
 
   destroy$: Subject<void> = new Subject()
@@ -29,10 +29,10 @@ export class FilterOperatorComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     const chosenPosition$ = this.chosenPositionControler.valueChanges;
 
-    this.people$ = this.mockRequestService.getPeopleArray();
+    this.people$ = this.mockRequestService.getPeopleSeparately();
     
-    this.people$.pipe(takeUntil(this.destroy$)).subscribe( (people) => {
-      this.tableData = people;
+    this.people$.pipe(takeUntil(this.destroy$)).subscribe( (person) => {
+      this.tableData.push(person);
     })
 
     // forkJoin([chosenPosition$, this.people$])

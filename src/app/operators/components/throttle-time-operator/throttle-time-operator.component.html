@@ -1,0 +1,21 @@
+<app-operator-page>
+    <div short-description>
+        <p class="description-text">
+            <span class="important"> Throttle time</span>- operator in RxJS works by delaying emissions for a certain period of time and then emitting the most recent value. In exmaple below it is used to limiting number of firing submiting events after
+            first click.
+        </p>
+    </div>
+    <div example-code>
+        <quill-view format="text" [content]="codeExample" [preserveWhitespace]="true"></quill-view>
+    </div>
+    <div class="example-use" example-use>
+        <ul>
+            <li *ngFor="let person of listOfUsers"> {{ person.name }}</li>
+        </ul>
+        <form [formGroup]="form">
+            <input nz-input formControlName="name" placeholder="Name">
+            <input nz-input formControlName="age" placeholder="Age">
+            <button nz-button #btn nzType="primary" type="submit" [disabled]="form.invalid">Submit</button>
+        </form>
+    </div>
+</app-operator-page>

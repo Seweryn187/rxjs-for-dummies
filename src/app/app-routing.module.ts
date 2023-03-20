@@ -9,11 +9,12 @@ import { DistinctUntilChangedOperatorComponent } from '@operators/components/dis
 import { FilterOperatorComponent } from '@operators/components/filter-operator/filter-operator.component';
 import { ForkJoinOperatorComponent } from '@operators/components/fork-join-operator/fork-join-operator.component';
 import { MapOperatorComponent } from '@operators/components/map-operator/map-operator.component';
-import { MergeMapOperatorComponent } from '@operators/components/merge-map-operator/merge-map-operator.component';
 import { SwitchMapOperatorComponent } from '@operators/components/switch-map-operator/switch-map-operator.component';
 import { TakeUntilOperatorComponent } from '@operators/components/take-until-operator/take-until-operator.component';
 import { WithLatestFromOperatorComponent } from '@operators/components/with-latest-from-operator/with-latest-from-operator.component';
 import { MergeOperatorComponent } from '@operators/components/merge-operator/merge-operator.component';
+import { ThrottleTimeOperatorComponent } from '@operators/components/throttle-time-operator/throttle-time-operator.component';
+import { RetryOperatorComponent } from '@operators/components/retry-operator/retry-operator.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -24,11 +25,12 @@ const routes: Routes = [
   { path: 'operators/filter', component: FilterOperatorComponent},
   { path: 'operators/fork-join', component: ForkJoinOperatorComponent},
   { path: 'operators/map', component: MapOperatorComponent},
-  { path: 'operators/merge-map', component: MergeMapOperatorComponent},
   { path: 'operators/merge', component: MergeOperatorComponent},
   { path: 'operators/switch-map', component: SwitchMapOperatorComponent},
   { path: 'operators/take-until', component: TakeUntilOperatorComponent},
   { path: 'operators/with-latest-from', component: WithLatestFromOperatorComponent},
+  { path: 'operators/throttle-time', component: ThrottleTimeOperatorComponent},
+  { path: 'operators/retry', component: RetryOperatorComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
 
