@@ -38,7 +38,6 @@ export class ThrottleTimeOperatorComponent implements AfterViewInit, OnInit, OnD
   }
 
   ngAfterViewInit(): void {
-    console.log(this.button);
     fromEvent(this.button.elementRef.nativeElement, 'click').pipe(
       delay(1000),
       throttleTime(2000)
