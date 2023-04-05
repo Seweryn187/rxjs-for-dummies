@@ -1,6 +1,5 @@
 export enum Operators {
     MAP = 'map',
-    FILTER = 'filter',
     COMBINE_LATEST = 'combine latest',
     SWITCH_MAP = 'switch map',
     TAKE_UNTIL = 'take until',
